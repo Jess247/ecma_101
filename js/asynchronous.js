@@ -41,7 +41,7 @@ spacePeople().then(
     console.error(new Error("Can't load Data"))
 );
 
-// returning Promises with fetch -> outputs the same as the spacePeople function
+// returning Promises with fetch - outputs the same as the spacePeople function
 let getSpacePeople = () => 
     fetch("http://api.open-notify.org/astros.json")
         .then(res => res.json());
