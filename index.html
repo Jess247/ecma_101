@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures</title>
+    <style>
+        #box {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #box > div {
+            height: 5em;
+            width: 5em;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let:</h1>
+
+    <div id="box"></div>
+    <script type="text/javascript">
+    // let keyword
+        var topic = "JavaScript";
+
+        if(topic){
+            var topic = "ECMAScript";
+            console.log("block", topic);
+        }
+        var div;
+        var box = document.getElementById("box");
+
+        for(let i = 0; i<5; i++){
+            div = document.createElement("div");
+            div.onclick = function() {
+                alert("This is box # " + i);
+            }
+            box.appendChild(div);
+        }
+
+    // const keyword
+    const maxNum = 100;
+    // error constances cant be rewritten
+    for(let i = 1; i<maxNum; i++){
+            i = i*i;
+
+            document.write(i, "<br>");
+    }
+            
+    </script>
+    <!-- Comment out the scripts you dont need -->
+    <script src="js/datastructures.js"></script>
+    <script src="js/arrays.js"></script>
+    <script src="js/objects.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/asynchronous.js"></script>
+</body>
+</html>
